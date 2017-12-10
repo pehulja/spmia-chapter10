@@ -85,8 +85,6 @@
              <configuration>
                  <imageName>${docker.image.name}:${docker.image.tag}</imageName>
                  <dockerDirectory>${basedir}/target/dockerfile</dockerDirectory>
-                 <serverId>docker-hub</serverId>
-                 <registryUrl>https://index.docker.io/v1/</registryUrl>
                  <resources>
                      <resource>
                          <targetPath>/</targetPath>
