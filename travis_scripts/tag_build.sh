@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Tagging build with $BUILD_NAME"
-export TARGET_URL="https://api.github.com/repos/pehulja/spmia-chapter10/releases?access_token=$GITHUB_TOKEN"
+export TARGET_URL="https://api.github.com/repos/pehulja/spmia-chapter10/releases?access_token=${GITHUB_TOKEN}"
 
 body="{
   \"tag_name\": \"$BUILD_NAME\",

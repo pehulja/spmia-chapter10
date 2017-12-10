@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 echo "Pushing service docker images to docker hub ...."
-echo "PASSWORD $DOCKER_PASSWORD"
-echo $DOCKER_USERNAME
-echo $DOCKER_PASSWORD
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+echo "PASSWORD ${DOCKER_PASSWORD}"
+echo ${DOCKER_USERNAME}
+echo ${DOCKER_PASSWORD}
+docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 docker push pehulja/tmx-authentication-service:$BUILD_NAME
 docker push pehulja/tmx-licensing-service:$BUILD_NAME
 docker push pehulja/tmx-organization-service:$BUILD_NAME
