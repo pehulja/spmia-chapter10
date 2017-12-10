@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 RUN  apk update && apk upgrade && apk add netcat-openbsd
 RUN mkdir -p /usr/local/zuulservice
-ADD @project.build.finalName@.jar /usr/local/zuulservice/
-ADD run.sh run.sh
-RUN chmod +x run.sh
+ARG JAR_FILE
+ADD target/${JAR_FILE} /usr/local/zuulservice/
+ADD target/run.sh run.sh
 CMD ./run.sh
